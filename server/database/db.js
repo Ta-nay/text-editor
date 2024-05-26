@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
+import 'dotenv/config';
 const connection = async () => {
-    const url = `mongodb+srv://admin:JbRJ38hZ5JW7SBdI@cluster0.gnazixi.mongodb.net/google-docs`;
+    const url = process.env.URL;
 
     try{
         await mongoose.connect(url, {
